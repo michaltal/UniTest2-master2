@@ -11,8 +11,15 @@ class Calculator:
         """Returns the sum of 2 numbers """
         return self.a + self.b
 
+    def square_root(self):
+        """Returns the Square Root of 2 numbers"""
+        return f'{self.a ** 2}'
+
 # calc = Calculator(3, 4)
 # print(calc.sum_numbers())
 
 
 
+
+
+# dndn

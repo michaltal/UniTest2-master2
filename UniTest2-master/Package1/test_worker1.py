@@ -1,7 +1,8 @@
 from unittest import TestCase
 from unittest.mock import patch
 from Package1.Worker import Worker
-
+import datetime
+import requests
 
 class TestWorker(TestCase):
     def setUp(self):
@@ -16,19 +17,8 @@ class TestWorker(TestCase):
         self.assertTrue(res == 'Moshe Cohen')
 
 
-
-
-    def test_age(self):
-        pass
-
-    def test_days_to_birthday(self):
-        pass
-
-    def test_greet(self):
-        pass
-
     def test_location(self):
-        with patch('Worker.requests.get') as mocked_get:
+        with patch('Package1.Worker.requests.get') as mocked_get:
             mocked_get.return_value.ok = True
             mocked_get.return_value.text = 'Success'
 

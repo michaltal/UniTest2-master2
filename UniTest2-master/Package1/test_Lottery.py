@@ -6,6 +6,10 @@ class TestLottery(TestCase):
 
     def setUp(self):
         self.lottery = Lottery()
+        print('setUp')
+
+    def tearDown(self):
+        print('tearDown')
 
 
     # using mock as a decorator
