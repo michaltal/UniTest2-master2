@@ -19,12 +19,13 @@ class Lottery:
 
     def valid_range(self):
         """this function checks the range of the returned list that the rand_numbers function returns"""
-        list1 = self.rand_numbers()
-        for i in list1:
+        self.numbers = self.rand_numbers()
+        for i in self.numbers:
             if i < 1 or i > 45:
                 return False
-            else:
-                return True
+        else:
+            return True
+
 
 
     def __str__(self):
