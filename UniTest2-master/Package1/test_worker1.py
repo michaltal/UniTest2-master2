@@ -25,3 +25,4 @@ class TestWorker(TestCase):
             res = self.moshe.location()
             self.assertEqual(res, 'Success')
 
+

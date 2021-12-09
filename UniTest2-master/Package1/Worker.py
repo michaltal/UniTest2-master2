@@ -1,6 +1,8 @@
 # class Worker
 import datetime
 import requests
+import sys
+import json
 
 
 class Worker:
@@ -52,9 +54,11 @@ class Worker:
         response = requests.get(url)
 
         if response.ok:
+            # return json.dumps(response.text, indent=4)
             return response.text
         else:
             return 'Bad response!'
 
-# Yoram = Worker('Yoram', 'Marshall', 1970, 7, 30, '2 Kaplan, Tel Aviv', 'il')
-# print(Yoram.location())
+Yoram = Worker('Yoram', 'Marshall', 1970, 7, 30, '2 Kaplan, Tel Aviv', 'il')
+print(Yoram.location())
+# print(sys.path)

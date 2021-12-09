@@ -36,7 +36,12 @@ class TestLottery(TestCase):
             mock_rand_num.return_value = [0, 31, 11, 12, 12, 20]
             print("out of range values", mock_rand_num.return_value)
             self.assertFalse(self.lottery.valid_range())
+
             mock_rand_num.return_value = [46, 31, 11, 12, 12, 20]
+            print("out of range values", mock_rand_num.return_value)
+            self.assertFalse(self.lottery.valid_range())
+
+            mock_rand_num.return_value = [45, 31, 60, 12, 12, 20]
             print("out of range values", mock_rand_num.return_value)
             self.assertFalse(self.lottery.valid_range())
 
@@ -46,3 +51,4 @@ class TestLottery(TestCase):
             mock_rand_num.return_value = [1, 31, 11, 12, 45, 20]
             print("in range values", mock_rand_num.return_value)
             self.assertTrue(self.lottery.valid_range())
+
